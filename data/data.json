@@ -1,0 +1,25 @@
+{
+    "person": {
+        "yumi": {
+            "like": [
+                "gamble",
+                "game"
+            ],
+            "dislike": [
+                "study",
+                "pain"
+            ]
+        },
+        "info": {
+            "age": 15,
+            "gender": "female"
+        },
+        "career": {
+            "current": "waiter",
+            "past": [
+                "student",
+                "cooker"
+            ]
+        }
+    }
+}

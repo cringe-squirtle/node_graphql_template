@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {rootGraphqlHTTP} from './schemas/root.js'
+import { rootGraphqlHTTP } from './graphql/root.js'
 
 const app = express();
 app.use('/graphql', rootGraphqlHTTP);
