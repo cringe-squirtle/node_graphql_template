@@ -4,15 +4,19 @@ import data from '../../data/data.json'
 
 
 export const updateInfoMutation = `
+input UpdateInfoInput{
+    age:Int
+    gender: String
+}
 type Mutation{
-    updateInfo(age: Int, gender: String): Person
+    updateInfo(input: UpdateInfoInput): Person
 }
 `
 
-export const updateInfo = (age, gender) => {
+export const updateInfo = ({ input }) => {
     if (data?.person?.info == null) return Person;
-    // console.log(age, gender);
+    const { age = 0, gender = "unknown" } = input
     data.person.info = { age, gender }
-    fs.writeFile('../../data/data.json', JSON.stringify(data))
+    fs.writeFile('../../data/data.json', JSON.stringify(data), null, () => { })
     return Person
 }
