@@ -17,6 +17,6 @@ export const updateInfo = ({ input }) => {
     if (data?.person?.info == null) return Person;
     const { age = 0, gender = "unknown" } = input
     data.person.info = { age, gender }
-    fs.writeFile('../../data/data.json', JSON.stringify(data), null, () => { })
+    fs.writeFileSync('data/data.json', JSON.stringify(data), 'utf8', () => { })
     return Person
 }
