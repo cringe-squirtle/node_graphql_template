@@ -1,1 +1,25 @@
-{"person":{"yumi":{"like":["gamble","game"],"dislike":["study","pain"]},"info":{"age":10,"gender":"male"},"career":{"current":"waiter","past":["student","cooker"]}}}
+{
+    "person": {
+        "info": {
+            "age": 11,
+            "gender": "test gendea"
+        },
+        "career": {
+            "current": "waiter",
+            "past": [
+                "student",
+                "cooker"
+            ]
+        },
+        "yumi": {
+            "like": [
+                "gamble",
+                "game"
+            ],
+            "dislike": [
+                "study",
+                "pain"
+            ]
+        }
+    }
+}

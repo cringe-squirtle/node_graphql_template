@@ -1,10 +1,13 @@
-import data from '../../data/data.json'
+import { getData } from "../../data/dataUtil.js";
 
 export const CareerType = `
 type Career {
   current: String
   past:[String]
 }
-`
+`;
 
-export const Career = { current: data?.person?.career?.current, past: data?.person?.career?.past };
+export const Career = {
+  current: getData()?.person?.career?.current,
+  past: getData()?.person?.career?.past,
+};

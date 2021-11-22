@@ -1,7 +1,5 @@
-import { Person } from '../queries/person.js'
-import fs from 'fs'
-import data from '../../data/data.json'
-
+import { Person } from "../queries/person.js";
+import { getData, setData } from "../../data/dataUtil.js";
 
 export const updateInfoMutation = `
 input UpdateInfoInput{
@@ -11,12 +9,12 @@ input UpdateInfoInput{
 type Mutation{
     updateInfo(input: UpdateInfoInput): Person
 }
-`
+`;
 
 export const updateInfo = ({ input }) => {
-    if (data?.person?.info == null) return Person;
-    const { age = 0, gender = "unknown" } = input
-    data.person.info = { age, gender }
-    fs.writeFileSync('data/data.json', JSON.stringify(data), 'utf8', () => { })
-    return Person
-}
+  const { age, gender } = input;
+  const data = getData()
+  data.person.info = {age, gender};
+  setData({ ...data });
+  return Person;
+};

@@ -1,6 +1,6 @@
-import { YumiType, Yumi } from './yumi.js'
-import { CareerType, Career } from './career.js'
-import { InfoType, Info } from './info.js';
+import { YumiType, Yumi } from "./yumi.js";
+import { CareerType, Career } from "./career.js";
+import { InfoType, Info } from "./info.js";
 
 export const PersonType = `
 ${CareerType}
@@ -13,11 +13,14 @@ type Person {
 }
 `;
 
-
 export const PersonQuery = `
 type Query{
     person: Person
 }
-`
+`;
 
-export const Person = { yumi: () => Yumi, career: () => Career, info: () => Info };
+export const Person = {
+  yumi: () => Yumi,
+  career: () => Career,
+  info: () => Info,
+};

@@ -1,9 +1,12 @@
-import data from '../../data/data.json'
+import { getData } from "../../data/dataUtil.js";
 
 export const YumiType = `
 type Yumi {
   like: [String],
   dislike: [String]
 }
-`
-export const Yumi = { like: () => data?.person?.yumi?.like, dislike: () => data?.person?.yumi?.dislike }
+`;
+export const Yumi = {
+  like: () => getData()?.person?.yumi?.like,
+  dislike: () => getData()?.person?.yumi?.dislike,
+};

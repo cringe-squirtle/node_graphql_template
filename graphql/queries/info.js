@@ -1,4 +1,4 @@
-import data from '../../data/data.json'
+import { getData } from "../../data/dataUtil.js";
 
 export const InfoType = `
 type Info {
@@ -7,4 +7,7 @@ type Info {
 }
 `;
 
-export const Info = { age: () => data?.person?.info?.age, gender: () => data?.person?.info?.gender };
+export const Info = {
+  age: () => getData()?.person?.info?.age,
+  gender: () => getData()?.person?.info?.gender,
+};
