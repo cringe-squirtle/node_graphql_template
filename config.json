@@ -1,0 +1,9 @@
+{
+  "oauth": {
+    "google": {
+      "api_key": "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",
+      "cliend_id": "222427129039-e0gec0jemqj1u3nk8082n7pqqvee4ool.apps.googleusercontent.com",
+      "redirect_uri": "http://localhost:5000/auth/google/redirect"
+    }
+  }
+}
